@@ -1,0 +1,379 @@
+:root {
+  font-size: 62.5%;
+  --font-size-s: 1.3rem;
+  --font-size-m: 1.6rem;
+  --font-size-l: 2rem;
+  --font-size-xl: 2.6rem;
+  --color-primary: #dadada;
+  --color-gray: #737a82;
+  --color-design: #00ce79;
+  --color-dark: #090c0f;
+  --color-main: #11161c;
+  --gap-s: 1rem;
+  --gap-m: calc(var(--gap-s) * 2);
+  --gap-1: calc(var(--gap-s) * 3);
+  --gap-xl: calc(var(--gap-s) * 5);
+  --max-block-width: 800px;
+  --font-standard: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size-m);
+  background-color: var(--color-main);
+  color: var(--color-primary);
+  font-family: var(--font-standard);
+}
+
+p,
+div,
+section,
+article {
+  line-height: 1.6em;
+}
+
+main {
+  max-width: var(--max-block-width);
+  margin-inline: auto;
+  margin-block: var(--gap-xl);
+}
+
+#main-header > nav {
+  height: 80px;
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  background-color: var(--color-dark);
+  place-items: center;
+}
+
+#main-header img {
+  max-height: 80px;
+}
+
+#main-menu {
+  list-style-type: none;
+  display: flex;
+}
+
+#main-menu > li {
+  padding-inline: 1em;
+}
+
+#main-menu > li.active > a {
+  color: var(--color-design);
+}
+
+#main-menu a {
+  text-decoration: none;
+  color: var(--color-primary);
+  position: relative;
+}
+
+#main-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-design);
+  transition: width 0.5s ease-out;
+}
+#main-menu > li:hover > a::after {
+  width: 100%;
+}
+
+#Shop-btn {
+  background-color: var(--color-design);
+  padding: o.4em 0.8em;
+  border-radius: 4px;
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+#shop-btn {
+  background-color: var(--color-design);
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+#shop-btn:hover {
+  background-color: #00a352;
+}
+
+/*=======       stile per footer       =======*/
+
+#main-footer {
+  background-color: var(--color-dark);
+  margin-top: 50px; /* Adicione uma margem superior de 40px */
+}
+
+#footer-bottom {
+  text-align: center;
+  padding-bottom: var(--gap-l);
+  color: var(--color-gray);
+  font-size: var(--font-size-s);
+}
+
+#footer-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--gap-l);
+  padding-block: var(--gap-m);
+  max-width: var(--max-block-width);
+  margin-inline: auto;
+}
+
+#footer-top img {
+  max-height: 100px;
+  height: auto; /* Mantenha a altura automática para preservar a proporção */
+  filter: grayscale(1);
+  opacity: (0.8);
+}
+
+#footer-top ul {
+  list-style-position: inside;
+  color: var(--color-design);
+}
+
+#footer-top a {
+  text-decoration: none;
+  color: var(--color-gray);
+  transition: color 0.4s ease-out;
+}
+
+#footer-top a:hover {
+  color: var(--color-design);
+}
+
+/*=======       stilo per la pagina home       =======*/
+
+#Componente1 {
+  display: grid;
+  grid-template-columns: 100px auto;
+}
+
+#Componente1 h2 {
+  margin-bottom: var(--gap-s);
+}
+
+#Componente1 img {
+  width: 60px;
+  height: 60px; /* Defina a altura da imagem */
+  border-radius: 50%;
+  border: 2px solid var(--color-design);
+}
+
+main > [id^="componente"] {
+  margin-bottom: var(--gap-xl);
+}
+
+#Componente1 {
+  margin-bottom: var(--gap-xl); /*============>>> GPT */
+}
+
+#Componente2 > h2 {
+  margin-bottom: var(--gap-m);
+}
+
+#wrapper-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--gap-l);
+}
+
+#wrapper-box h3 {
+  margin-bottom: var(--gap-s);
+}
+
+#wrapper-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--gap-xl);
+}
+
+#wrapper-box > div {
+  position: relative;
+  background-color: var(--color-dark);
+  padding: var(--gap-xl) var(--gap-m) var(--gap-xl);
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+
+#wrapper-box > div::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  background: rgb(0, 206, 121);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 206, 121, 1) 0%,
+    rgba(1, 255, 234, 1) 68%,
+    rgba(1, 160, 193, 1) 100%
+  );
+  left: 0;
+  top: 0;
+  transition: all 0.6s ease-out;
+}
+
+#wrapper-box p {
+  color: var(--color-gray);
+  margin-bottom: var(--gap-s);
+}
+
+#wrapper-box > div:hover::before {
+  height: 100%;
+}
+#wrapper-box .numero {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--color-gray);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -10px;
+  color: var(--color-design);
+  font-weight: bold;
+}
+
+/*=======       stile della pagina chi siamo       =======*/
+
+#timeline-intro {
+  margin-bottom: var(--gap-xl);
+}
+
+#timeline-intro > h1 {
+  text-align: center;
+}
+
+#timeline-intro > p {
+  text-align: center;
+  color: var(--color-gray);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+}
+
+.timeline-tex-left > .text {
+  text-align: right;
+}
+
+.text,
+.time {
+  padding-inline: var(--gap-xl);
+  padding-inline: 20px; /* Defina o valor desejado para o espaçamento entre .text e .time GPT */
+}
+
+.text {
+  padding-bottom: var(--gap-xl);
+}
+.year {
+  display: inline-block;
+  background-color: var(--color-design);
+  color: var(--color-dark);
+  padding: 4px 10px; /* Ajuste o preenchimento para aumentar o tamanho do botão  GPT */
+  font-size: 1.6rem; /* Ajuste o tamanho da fonte para aumentar o tamanho do texto GPT*/
+  padding: o.1em 1em;
+  font-size: var(--font-size-s);
+  font-weight: 700;
+  border-radius: 1.4em;
+}
+
+.timeline-tex-right > .time {
+  text-align: right;
+}
+
+.line {
+  border-right: 1px solid var(--color-gray);
+}
+
+.round {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-design);
+  border-radius: 50%;
+  margin-left: -6px;
+  margin-top: 6px;
+}
+
+/*=======       styloe per pagine contatti       =======*/
+
+#contatti-Componente {
+  width: var(--max-block-width);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  column-gap: var(--gap-l);
+}
+.block-info {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  margin-bottom: var(--gap-m);
+  align-items: center;
+}
+
+#form-contatti > h1 {
+  margin-bottom: var(--gap-m);
+  font-size: var(--font-size-xl);
+  font-size: 25px; /* Ajuste o tamanho do texto conforme necessário */
+}
+
+:root {
+  --font-size-xl: 20px; /* Defina o tamanho de fonte desejado */
+}
+.form-item {
+  margin-bottom: var(--gap-l);
+}
+
+.form-item > :is(input, textarea) {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid var(--color-gray);
+  padding-block: 0.6em;
+  font-size: var(--font-size-m);
+  color: var(--color-primary);
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+}
+
+.form-item > :is(input, textarea) ::placeholder {
+  font-weight: 400;
+}
+
+.form-item {
+  height: 100px;
+}
+
+.form-item > :is(input, textarea):focus {
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.form-intm {
+  margin-top: 20px; /* Adicione uma margem superior de 20px */
+  margin-bottom: 40px;
+}
+
+/* Estilo ao botão de envio dentro de form-intm */
+.form-intm > button[type="submit"] {
+  background-color: green; /* Defina a cor desejada (verde) */
+  padding: 0.8em 1.5em; /* Ajuste o tamanho conforme necessário */
+  font-size: var(--font-size-m);
+  border-radius: 10px;
+  color: white; /* Cor do texto do botão */
+}
+
+main {
+  padding-bottom: 40px; /* Adicione um espaço de 40px do rodapé */
+}

@@ -1,0 +1,221 @@
+/* BREAKPOINT */
+/* Menor que 600px */
+
+/* Estilos para dispositivos pequenos */
+
+/* Igual ou maior que 600px */
+
+/* Estilos para dispositivos grandes */
+
+/* stile.css - Módulo CSS - Visual Studio Code */
+/* Código de exemplo - S Responsive Form Multistep */
+/* © localhost:1234 */
+
+/* Estilos para o formulário multistep */
+:root {
+  font-size: 62.5%;
+  font-family: "Raleway", sans-serif;
+  --font-size-s: 1.4rem;
+  --font-size-xs: calc(var(--font-size-s) * 0.9);
+  --font-size-m: calc(var(--font-size-s) * 1.2);
+  --font-size-1: calc(var(--font-size-s) * 1.5);
+  --font-size-xl: calc(var(--font-size-s) * 2);
+  --gap-s: 1.5rem;
+  --gap-m: calc(var(--gap-s) * 2);
+  --gap-1: calc(var(--gap-s) * 3);
+  --gap-xl: calc(var(--gap-s) * 5);
+  --color-white: #fff;
+  --color-dark: hsl(0, 0%, 28%);
+  --color-gray: hsl(0, 0%, 56%);
+  --color-light: hsl(0, 0%, 90%);
+  --color-primary: hsl(345, 99%, 62%);
+  --color-secondary: hsl(165, 96%, 44%);
+}
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.8em 1.8em;
+  border-radius: 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+}
+
+body {
+  padding: var(--gap-m);
+  font-size: var(--font-size-m);
+  color: var(--color-dark);
+  font-family: var(--font-standard);
+  line-height: 1.5em;
+  background-color: var(--color-light);
+}
+#form-component {
+  background-color: var(--color-white);
+  display: grid;
+  grid-template: "header header" "indicator form" / 30px 1fr;
+  padding: var(--gap-m);
+  gap: var(--gap-xl);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Igual ou maior que 600px */
+@media (min-width: 600px) {
+  #form-component {
+    grid-template: "header header" "indicator form" / 200px 1fr;
+  }
+  /* Estilos para dispositivos grandes */
+}
+
+#form-component:focus-within {
+  border-bottom: 2px solid var(--color-gray);
+}
+
+#form-info {
+  grid-area: header;
+}
+#form-indicator {
+  grid-area: indicator;
+}
+#form-wrapper {
+  grid-area: form;
+  overflow: hidden;
+}
+
+.step-info {
+  display: none; /* GPT */
+  padding-top: var(--gap-s);
+  font-size: 17px; /* GPT */
+  margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .step-info {
+    display: none;
+    display: initial;
+  }
+}
+
+.step-status {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+}
+
+.step-indicator {
+  border-left: 1px solid var(--color-gray);
+  padding-block: var(--gap-m);
+}
+
+.indicator-item {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-left: -16px;
+}
+.indicator-item.current {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.indicator-item.next {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray);
+}
+
+.step-status.inviato {
+  color: var(--color-secondary);
+  font-weight: bold;
+  /*display: none;*/
+}
+
+.step-status.inviato .indicator-item {
+  background-color: var(--color-secondary);
+  color: var(--color-white); /* Colore ícone "ok" */
+}
+
+.step-status.inviato > .step-indicator {
+  padding-bottom: 0;
+}
+
+/*=======       style form       =======*/
+
+.form-item {
+  position: relative;
+  margin-bottom: var(--gap-m);
+}
+.form-item > label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.4s;
+  cursor: text;
+}
+
+:is(input, textarea):focus + label {
+  font-size: var(--font-size-xs);
+  top: -18px;
+}
+:is(input, textarea):not(:placeholder-shown) + label {
+  font-size: var(--font-size-xs);
+  top: -18px;
+}
+.form-item > :is(input, textarea) {
+  width: 100%;
+  padding-block: 0.5em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-gray);
+}
+@media (min-width: 600px) {
+  .form-group-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--gap-xl);
+  }
+}
+#riepilogo-wrapper > ul {
+  list-style-type: none;
+}
+[id^="step-"] > h3 {
+  margin-bottom: var(--gap-m);
+}
+#form-btn-control {
+  text-align: right;
+}
+#btn-prev {
+  background-color: var(--color-light);
+}
+#btn-next {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transition: all 1s;
+}
+#btn-next:hover {
+  background-color: var(--color-secondary);
+}
+#steps {
+  display: flex;
+  width: 400%;
+}
+
+[id^="step"] {
+  width: 25%;
+}
+#step-1 {
+  margin-left: -0%; /* Javas cript*/
+}
+
+/*_________________*/
+
+.indicator-item.completed {
+  background-color: green; /* or another style indicating completion */
+}

@@ -1,0 +1,194 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Form Multistep</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/PROGETTO-2/assests/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;800&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="#" type="image/x-icon">
+ </head>
+    <style>
+    
+    </style>
+<body>
+    <article id="form-component">
+            <!-- Intestazione -->
+        <section id="form-info">
+                 <h1>Form Multistep</h1>
+                   <p>Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit.
+                </p>
+        </section>
+            <!-- Indicatori-->
+        <section id="form-indicator">
+            <div class="step-status" data-step="1">
+                <p class="step-info">
+                 informazione base 
+                 </p>
+                  <div class="step-indicator">
+                   <div class="indicator-item current">
+                    1
+                 </div>
+               </div>
+             </div>
+                <div class="step-status" data-step="2">
+                 <p class="step-info">
+                   Datti acaut 
+                   </p>
+                    <div class="step-indicator">
+                     <div class="indicator-item next">
+                       2
+                    </div>
+                 </div>
+              </div>
+              <div class="step-status" data-step="3">
+                 <p class="step-info">
+                   Riepilogo e Invio 
+                   </p>
+                  <div class="step-indicator">
+                     <div class="indicator-item next">
+                      3
+                   </div>
+                </div>
+              </div>
+              <div class="step-status inviato"
+             data-step="inviato">
+                <p class="step-info">
+                    Invio avvenuto
+                  </p>
+                    <div class="step-indicator">
+                        <div class="indicator-item">
+                       &check;
+                   </div>
+               </div>
+           </div>
+        </section>
+            <!-- Campi del Form -->
+        <section id="form-wrapper">
+            <form action="" novalidate> 
+
+                <section id="steps"> 
+                 <!--       Step 1       -->
+                  <section id="step-1">
+                        <h3>informazioni base</h3>
+                        <div class="form-group-item">
+                            <div class="form-item">
+                               <input type="text" id="nome" 
+                               placeholder=" ">
+                               <label for="nome">Nome</label>
+                            </div>
+                            <div class="form-item">
+                               <input type="text" id="cognome"
+                                placeholder="">
+                               <label for="cognome">Cognome</label>
+                            </div>
+                           <div class="form-item">
+                            <input type="email" id="email" 
+                            placeholder="">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="date" id="data-di-nacita" 
+                            placeholder="">
+                            <label for="data-di-nacita">Nato il</label>
+                        </div>
+                    </div>
+                   </section>
+                    <!--       Step 2       -->
+                    <section id="step-2">
+                        <h3>Dati accaunt</h3>
+                        <div class="form-group-item">
+                        <div class="form-item">
+                     
+                            <input type="password" id="password" placeholder="">
+                            <label for="password">password *</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="password" id="password-cofirma" placeholder="">
+                            <label for="password-cofirma">Coferma Password *</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="text" id="indirizzo" placeholder="">
+                            <label for="indirizzo">Indizzo</label>
+                         </div>  
+                         <div class="form-item">
+                            <input type="text" id="cap" placeholder="">
+                            <label for="cap">Cap</label>
+                         </div>  
+                         <div class="form-item">
+                            <input type="text" id="comune" placeholder="">
+                            <label for="comune">Comune</label>
+                         </div> 
+                          <div class="form-item">
+                            <input type="text" id="provincia" placeholder=" ">
+                            <label for="provincia">Provincia</label>
+                         </div>
+                       </div>
+                    </div>
+                    </section> 
+                    <!---       Step 3       -->
+                    <section id="step-3">
+                        <h3>Riepilogo dati</h3>
+                       <div id="riepilogo-wrapper">
+                            <ul>
+                                <li>
+                                     Nome <span 
+                                     id="riepilogo-nome"></span>
+                               </li>  
+                                <li>
+                                     Cognome <span id="riepilogo-nome"></span>
+                                </li>
+                                <li>
+                                     Email <span id="riepilogo-nome"></span>
+                                </li>  
+                                <li>
+                                     Data di nascita<span
+                                      id="riepilogo-nome"></span>
+                                </li>  
+                                <li>
+                                     Indirizzo <span 
+                                     id="riepilogo-nome"></span>
+                                </li> 
+                                <li>
+                                     Cap <span
+                                     id="riepilogo-nome"></span>
+                                </li>  
+                                <li>
+                                     Comune <span
+                                     id="riepilogo-nome"></span>
+                                </li> 
+                                <li>
+                                     Provincia <span
+                                     id="riepilogo-nome"></span>
+                               </li> 
+                            </ul>
+                        </div>
+                    </section>
+                  <!---       Step 4       --->
+                  <section id="step-4">
+                   <h1>Forma inviato</h1>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Perspiciatis dolores ab repellendus ipsam inventore aut sit 
+                    fuga maiores recusandae commodi!</p>
+                     <a href="/PROGETTO-2/index.html">invia nuovo mensaggio</a>
+                  </section>
+                </section>
+                <div id="form-btn-control">
+                   <button id="btn-prev">Precedente</button>
+                   <button id="btn-next">Sucessivo</button>
+                </div>
+            </form>
+        </section>
+    </article>
+</body>
+<script src="/PROGETTO-2/js/app.js"></script>
+</html>
